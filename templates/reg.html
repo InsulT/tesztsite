@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Welcome</title>
+	<link rel="stylesheet" href="../static/style.css"/>
+	<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+<head>
+<script language="javascript">
+function clearField(input) {
+    input.value = "";
+};
+</script>
+<body>
+
+	<section id="wrapper">
+        <div class="col-md-6 col-md-offset-3">
+    {% if error %}
+        <div class="alert alert-danger">
+            <a href="#" class="alert-link">Hiba{{ error }}</a>
+        </div>
+    {% endif %}
+
+    {% if success %}
+        <div class="alert alert-success">
+            <a href="#" class="alert-link">Sikeresen regisztráltál!</a>
+        </div>
+    {% endif %}
+
+		<div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" ><b>Regisztráció</b></h3>
+                            </div>
+		<div class="panel-body">
+
+		<form class="form-horizontal" role="form">
+			  <div class="form-group">
+					<label for="inputEmail3" class="col-xs-6 col-sm-3  control-label">Email cím</label>
+					<div class="col-sm-6">
+					  <input type="email" name="mail" class="form-control" id="inputEmail3" placeholder="Email" >
+					</div>
+			  </div>
+			  
+			  <div class="form-group">
+					<label for="inputPassword3" class="col-xs-6 col-sm-3  control-label">Jelszó</label>
+					<div class="col-sm-6">
+					  <input type="password" name="pass" class="form-control" id="inputPassword3" placeholder="Jelszó">
+					</div>
+			  </div>
+			  
+			  <div class="form-group">
+					<label for="nevv" class="col-xs-6 col-sm-3  control-label">Vezetéknév</label>
+					<div class="col-sm-6">
+					  <input type="text" class="form-control" name="vnev" placeholder="Vezetéknév">
+					</div>
+			  </div>
+			  
+			  <div class="form-group">
+					<label for="nevk" class="col-xs-6 col-sm-3  control-label">Keresztnév</label>
+					<div class="col-sm-6">
+					  <input type="text" class="form-control" name="knev" placeholder="Keresztnév">
+					</div>
+			  </div>
+			  
+			<div class="form-group">  
+				<div class="btn-group">
+					 
+							<div class="col-sm-offset-1 col-sm-5">
+							  <button type="submit" class="btn btn-default">Regisztráció</button>					  
+							</div>
+				 
+							<div class="col-sm-offset-1 col-sm-3">
+							  <button type="submit" class="btn btn-default">Törlés</button onfocus="clearField(this);">				  
+							</div>
+					 
+				</div>
+			</div>
+		</form>
+		</div>
+		</div>
+		</div>
+		
+	</section>
+	
+</body>
+</html>

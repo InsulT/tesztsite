@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0
+}
+
+body {
+	font: 18px 'Lucida Sams Unicode';
+	color: #fff;
+	background: #f6f6f6;
+	background: linear-gradient(to bottom, #f5f6f6 0%, #c4c4c4 100%) fixed
+}
+
+section#wrapper{
+	width: 1000px;
+	margin: 100px auto 0 auto;
+}
+
+h1{
+	font-size: 50px;
+	color: #707070;
+	text-align: center
+}
+
+div.box{
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin: 50px 20px 0 20px; /*felül jobb alul bal*/
+	border: 5px solid #fff;
+	border-radius: 105px;
+	overflow: hidden;  /*divek eltûntetése*/
+	box-shadow: 10px 10px 20px rgba(0,0,0,0.2); /*függõleges eltolás, vízszintes eltolás, elmosás értéke, árnyék színe */
+}
+
+a{
+	color: #fff;
+}
+div.box img{
+	border-radius: 100px;
+}
+div.box div{
+	width: 200px;
+	height: 105px;
+	background: #000;
+	text-align: center;
+	border-radius: 100px;
+	padding: 95px 0 0 0;
+}
+
+div.effect-1{ /*Befoglaló div*/
+	position: relative;
+}
+
+div.effect-1 div{/*Alapértelmezett állapot*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 500ms;
+}
+
+div.effect-1:hover div{/*Egér ráhúzás*/
+	opacity: 0.8;
+}
+
+div.effect-2{
+	position: relative;
+}
+
+div.effect-2 img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: margin-left 800ms;
+}
+
+div.effect-2:hover img{/*Kicsúsztatjuk a képet balra*/
+	margin-left: 200px;
+}
+
+div.effect-2 div{
+
+}
+
+div.effect-3{
+	position: relative;
+}
+
+div.effect-3 div{
+	position: absolute;
+	opacity: .8;
+	top: 0;
+	left: 0;
+	margin-left: -200px;
+	transition: margin-left 500ms
+	
+}
+
+div.effect-3:hover div{
+	margin-left: 0;
+}
+
+div.effect-4{
+	position: relative;
+}
+
+div.effect-4 img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+div.effect-4 div{
+	opacity: 0.8;
+	transform: scale(0);
+	transition-duration: 500ms;
+	-webkit-transform: scale(0);
+}
+
+div.effect-4:hover div{
+	transform: scale(1);
+	transition-duration: 500ms;
+	-webkit-transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
