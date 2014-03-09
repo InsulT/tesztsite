@@ -6,8 +6,18 @@ from flask import request
 from flask import flash
 from flask import url_for
 from flask import redirect
+from flask import session
 
 app = Flask(__name__)
+
+app.secret_key = 'F12Zr47j\3yX R~X@H!jmM]Lwf/,?KT'
+
+def sumSessionCounter():
+  try:
+    session['counter'] += 1
+  except KeyError:
+    session['counter'] = 1
+
 
 @app.route('/')
 def home():
@@ -46,6 +56,30 @@ def reg():
         return render_template("reg.html",)
     print email+jelszo+vnev+knev
 
+@app.route('/about.html')
+def about():
+    sumSessionCounter()
+    return render_template('about.html')
 
+@app.route('/form')
+def form():
+  sumSessionCounter()
+  # if a name has been sent, store it on a session variable
+  if request.args.get('yourname'):
+    session['name'] = request.args.get('yourname')
+    # And then redirect the user to the main page
+    return redirect(url_for('about'))
+  else:
+    # If no name has been sent, show the form
+    return render_template('form.html', session=session)
+
+
+
+@app.route('/clear')
+def clearsession():
+    # Clear the session
+    session.clear()
+    # Redirect the user to the main page
+    return redirect(url_for('about'))
 if __name__ == '__main__':
     app.run(debug=True)

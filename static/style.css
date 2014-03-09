@@ -26,11 +26,11 @@ div.box{
 	width: 200px;
 	height: 200px;
 	float: left;
-	margin: 50px 20px 0 20px; /*felül jobb alul bal*/
+	margin: 50px 20px 0 20px; /*felï¿½l jobb alul bal*/
 	border: 5px solid #fff;
 	border-radius: 105px;
-	overflow: hidden;  /*divek eltûntetése*/
-	box-shadow: 10px 10px 20px rgba(0,0,0,0.2); /*függõleges eltolás, vízszintes eltolás, elmosás értéke, árnyék színe */
+	overflow: hidden;  /*divek eltï¿½ntetï¿½se*/
+	box-shadow: 10px 10px 20px rgba(0,0,0,0.2); /*fï¿½ggï¿½leges eltolï¿½s, vï¿½zszintes eltolï¿½s, elmosï¿½s ï¿½rtï¿½ke, ï¿½rnyï¿½k szï¿½ne */
 }
 
 a{
@@ -48,11 +48,11 @@ div.box div{
 	padding: 95px 0 0 0;
 }
 
-div.effect-1{ /*Befoglaló div*/
+div.effect-1{ /*Befoglalï¿½ div*/
 	position: relative;
 }
 
-div.effect-1 div{/*Alapértelmezett állapot*/
+div.effect-1 div{/*Alapï¿½rtelmezett ï¿½llapot*/
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -60,7 +60,7 @@ div.effect-1 div{/*Alapértelmezett állapot*/
 	transition: opacity 500ms;
 }
 
-div.effect-1:hover div{/*Egér ráhúzás*/
+div.effect-1:hover div{/*Egï¿½r rï¿½hï¿½zï¿½s*/
 	opacity: 0.8;
 }
 
@@ -75,7 +75,7 @@ div.effect-2 img{
 	transition: margin-left 800ms;
 }
 
-div.effect-2:hover img{/*Kicsúsztatjuk a képet balra*/
+div.effect-2:hover img{/*Kicsï¿½sztatjuk a kï¿½pet balra*/
 	margin-left: 200px;
 }
 

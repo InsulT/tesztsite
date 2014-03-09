@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/style.css"/>
+	<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <title>Rólunk</title>
+</head>
+<body>
+    <section id="wrapper">
+        <div class="col-md-6 col-md-offset-3">
+
+
+		<div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" ><b>Session demo</b></h3>
+                            </div>
+		<div class="panel-body">
+            <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        {% if session['name'] %}
+                        A neved, <strong>{{session['name']}}</strong>.<br/>
+                        {% else %}
+                        Még nincs beállítva név, <a href="{{ url_for('form') }}">itt</a> megteheted.<br/>
+                        {% endif %}
+                        Az oldal látogatásakor a számláló eggyel növekszik <strong>{{session['counter']}}</strong><br />
+                        <strong><a href="{{ url_for('clearsession') }}">Session törlése</a></strong> - <a href="{{ url_for('about') }}">Rólunk</a>
+                        - <a href="/">Főoldal</a>
+                    </div>
+             </form>
+		</div>
+        </div>
+        </div>
+        </section>
+
+</body>
+</html>
