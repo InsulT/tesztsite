@@ -81,5 +81,6 @@ def clearsession():
     session.clear()
     # Redirect the user to the main page
     return redirect(url_for('about'))
+
 if __name__ == '__main__':
     app.run(debug=True)
